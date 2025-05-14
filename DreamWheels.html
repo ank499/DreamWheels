@@ -1,583 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DreamWheels - Custom Car Designing & Tuning</title>
+    <title>Car Detailing Services</title>
     <style>
-        /* General Styles */
+        /* Basic Styling - Customize as needed */
         body {
-            font-family: 'Helvetica', sans-serif;
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        header {
-            background-color:rgba(9, 8, 8, 0.996);
-            color: white;
-            padding: 40px;
-            text-align: center;
-            font-size: 24px;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
+            background-color: #333
+                /* Example background color */
         }
 
         nav {
-            background-color: #34495e;
-            padding: 15px;
-            text-align: center;
+            background-color: #333;
+            /* Example navbar color */
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            /* Space logo and menu */
+            align-items: center;
+            /* Vertically center items */
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+
+
+        }
+
+        span {
+            color: red;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 20px;
+            /* Space between menu items */
         }
 
         nav a {
             color: white;
-            margin: 0 20px;
             text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 14px;
-            transition: color 0.3s;
+            padding: 5px 10px;
+            /* Add some padding to links */
         }
 
         nav a:hover {
-            color: #f39c12;
+            background-color: #555;
+            /* Example hover effect */
         }
 
-        section {
-            padding: 40px 20px;
-            margin: 20px auto;
-            background-color: white;
+        /* Example styles for the rest of your content */
+        /*.container {
             width: 80%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .services {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .services div {
-            width: 30%;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #ecf0f1;
-            border-radius: 8px;
+            background-color: #333;
+            box-shadow:  10px rgba(0, 0, 0, 0.1);
             text-align: center;
-        }
-
-        footer {
-            background-color: #2c3e50;
             color: white;
-            text-align: center;
-            padding: 20px;
+        }*/
+
+
+        /* Responsive Design - Example for smaller screens */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                /* Stack logo and menu vertically */
+                align-items: flex-start;
+                /* Align items to the left */
+            }
+
+            nav ul {
+                flex-direction: column;
+                /* Stack menu items vertically */
+                margin-top: 10px;
+                /* Add some space above the menu */
+            }
+
+            nav li {
+                margin: 10px 0;
+                /* Add top/bottom margins to menu items */
+                margin-left: 0;
+                /* Remove left margin */
+            }
+        }
+
+        .hero {
             position: relative;
-            bottom: 0;
+            /* Needed for overlay positioning */
+            overflow: hidden;
+            /* Hide video overflow */
+        }
+
+        .hero-video {
+            position: relative;
+            /* Needed for overlay positioning */
             width: 100%;
+            height: 100vh;
+            /* Make video take full viewport height */
+            overflow: hidden;
+            /* Hide any video overflow */
         }
 
-        form input, form textarea {
+        .hero-video video {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            height: 100%;
+            object-fit: cover;
+            /* Cover the entire container */
         }
-
-        form input[type="submit"] {
-            background-color: #2980b9;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-
-        form input[type="submit"]:hover {
-            background-color: #3498db;
-        }
+        .modal-backdrop {
+            position: relative;
+            }
+            
+               .mafia-service-form {
+                padding-bottom: 0px;
+                border-radius: 17px;
+            }
+            .mafia-service-form .modal-header {
+                background-color: #f00;
+                padding: 17px 20px !important;
+                display: flex;
+                align-items: center;
+                border-radius: 10px 10px 0 0;
+            }
+            .modal-dialog {
+                max-width: 700px;
+            }
+           .modal-header .close{
+                text-align: end;
+                width: 60%;
+            }
+        
+           .modal-header .close span{
+                font-size:25px;
+                color: white;
+            }
+            .modal-title{
+                font-weight: 700;
+                color: white;
+            }
     </style>
 </head>
+
 <body>
-
-<header>
     
-    <h1 style="background-color:rgb(115, 27, 42);">Welcome to DreamWheels</h1>
-    <p>Your Dream Car, Perfectly Designed and Tuned</p>
-</header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-    <h2 >About DreamWheels</h2>
-    <p>DreamWheels is a premier custom car designing and tuning platform, where we turn your automotive dreams into reality. Our team of experts uses cutting-edge technology to provide the best in car customization and performance tuning.</p>
-</section>
-
-<section id="services" class="services">
-    <div>
-        <h3>Custom Car Design</h3>
-        <p>We provide a full range of design services to personalize your car’s aesthetics and make it stand out.</p>
-    </div>
-    <div>
-        <h3>Performance Tuning</h3>
-        <p>Optimize your car’s performance with our expert tuning services that cater to speed, handling, and efficiency.</p>
-    </div>
-    <div>
-        <h3>Special Coatings</h3>
-        <p>Protect your vehicle with ceramic coating and PPF (Paint Protection Film) services for long-lasting shine and protection.</p>
-        <a href=""
-    </div>
-</section>
-
-<section id="contact">
+    <nav>
+        <div class="logo">DREAMWHEELS</div>
+        <ul>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="Services.html">SERVICES</a></li>
+            <li><a href="#">PACKAGES</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
     
-    <button id="showForm" type="button">Contact Us</button>
-    <a href="contact dreemwheels.html"></a>
-    
-</section>
-
-<style>
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-/* Section Styling */
-#contact {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* Title Styling */
-#contact h2 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-/* Button Styling */
-#showForm {
-    background-color: #2c3e50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#showForm:hover {
-    background-color: #1a242f;
-}
-
-/* Form Styling */
-#contactForm {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contactForm label {
-    width: 100%;
-    text-align: left;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-#contactForm input, #contactForm textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-#contactForm input:focus, #contactForm textarea:focus {
-    border-color: #2c3e50;
-    outline: none;
-}
-
-/* Submit Button */
-#submitForm {
-    background-color: #27ae60;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#submitForm:hover {
-    background-color: #1e8449;
-}
-</style>
-
-<script>
-    // Show form on "Contact Us" button click
-    document.getElementById('showForm').addEventListener('click', function () {
-        document.getElementById('contactForm').style.display = 'flex';
-        this.style.display = 'none';
-    });
-
-    // Handle form submission
-    document.getElementById('submitForm').addEventListener('click', function () {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        if (name && email && message) {
-            const contactDetails = { name, email, message };
-            console.log('Contact Details Saved:', contactDetails); // Replace with actual saving logic
-            alert('Thank you for contacting us!');
-            document.getElementById('contactForm').reset();
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('showForm').style.display = 'block';
-        } else {
-            alert('Please fill all the fields.');
-        }
-    });
-</script>
+    <div class="hero">
+        <div class="hero-video"> <video autoplay muted loop>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video></div>
 
 
-<footer>
-    <p>&copy; 2024 DreamWheels | Custom Car Designing & Tuning</p>
-</footer>
 
-<h2 style="text-align: center;">
-    <span style="color: #ca1414;">Our</span> 
-    <span style="color: #0a0a0a;">Services</span>
-</h2>
 
-                            <!-- Image -->
-        
-    <div class="service-box">
-        <h4>Paint Protection Films</h4>
-        <a href="https://www.3mindia.in/3M/en_IN/car-personalization-in/products/paint-protection-film/" target="_blank">
-            <img src="https://brotomotiv.in/wp-content/uploads/2021/12/s1.jpeg" alt="Paint Protection Films">
-        </a>
-    </div>
-    
-    <div class="service-box">
-        <h4>Car Detailing Services</h4>
-        <a href="https://diamondcutdetailing.co.uk/what-is-car-detailing-a-complete-guide/" target="_blank">
-            <img src="https://brotomotiv.in/wp-content/uploads/2021/12/s2.jpeg" alt="Car Detailing Services">
-        </a>
-    </div>
- 
-    
-    <!-- CSS -->
-    <style>
-        .service-box {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .service-box h4 {
-            margin-bottom: 10px;
-        }
-        .service-box img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .service-box img:hover {
-            transform: scale(1.05);
-        }
-    </style>
-    
-    <div class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
-        <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-                <div class="nectar-fancy-box using-img" style="min-height: 200px" data-style="hover_desc" data-border-radius="default" data-animation="" data-bg-animation="long_zoom" data-border="" data-delay="" data-alignment="center" data-color="accent-color">
-                    <div class="box-bg" style="background-image: url('https://brotomotiv.in/wp-content/uploads/2021/12/s2.jpeg');"></div>
-                    <div class="inner">
-                        <div class="heading-wrap">
-                        
-        <div id="services" class="services-container" style="background-color: #f9f7f5; padding: 20px;">
-            <!-- Detailing and Interior Cleaning -->
-            <div class="service-box">
-                <h4><strong>Detailing and Interior Cleaning</strong></h4>
-                <a href="https://bigsmobile.com/blog/everything-you-need-to-know-about-car-interior-detailing/#:~:text=It%20involves%20a%20thorough%20cleaning,and%20value%20of%20your%20car." target="_blank">
-                    <img src="https://brotomotiv.in/wp-content/uploads/2021/12/s3.jpeg" alt="Detailing and Interior Cleaning">
-                </a>
-            </div>
-        
-            <!-- Wrap Jobs -->
-            <div class="service-box">
-                <h4>Wrap Jobs</h4>
-                <a href="https://www.3mindia.in/3M/en_IN/graphics-signage-in/wraps/" target="_blank">
-                    <img src="https://brotomotiv.in/wp-content/uploads/2021/12/s4.jpeg" alt="Wrap Jobs">
-                </a>
-            </div>
-        
-            <!-- Insurance Claim -->
-            <div class="service-box">
-                <h4>Insurance Claim</h4>
-                <a href="https://www.acko.com/gi/lp/new-car-comprehensive-hi?utm_source=google&utm_medium=search&utm_campaign=Search_Brand_Acko_Car_Top8_Delhi_Exp_DELHI_Car&adgroup=Acko_Car_Exact&utm_content=713884833813&utm_term=acko%20car%20insurance&utm_device=c&gad_source=1&gclid=Cj0KCQiAuou6BhDhARIsAIfgrn5-CqTi20wa7_4nDRdTA8dLuazJ1wgi3-UJzuMLjtyTGQz1uQh4vKoaAikIEALw_wcB" target="_blank">
-                    <img src="https://brotomotiv.in/wp-content/uploads/2021/12/s5.jpeg" alt="Insurance Claim">
-                </a>
-            </div>
-        
-            <!-- Interior Modification -->
-            <div class="service-box">
-                <h4>Interior Modification</h4>
-                <a href="https://cetusautomotives.com/blog/car-interior-mods/" target="_blank">
-                    <img src="https://brotomotiv.in/wp-content/uploads/2021/12/s6.jpeg" alt="Interior Modification">
-                </a>
-            </div>
-        
-            <!-- Other Services -->
-            <div class="service-box">
-                <h4>Creamic Coatings</h4>
-                <a href="https://www.detailingdevils.com/blog/things-you-must-know-before-you-spend-on-ceramic-coating" target="_blank">
-                    <img src="https://brotomotiv.in/wp-content/uploads/2021/12/s7.jpeg" alt="Other Services">
-                </a>
-            </div>
-        </div>
-        
-        <!-- CSS for Styling -->
-        <style>
-            .services-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                gap: 20px;
-            }
-        
-            .service-box {
-                flex: 1 1 calc(25% - 20px);
-                text-align: center;
-                max-width: 300px;
-                margin: auto;
-            }
-        
-            .service-box h4 {
-                margin-bottom: 10px;
-                font-size: 18px;
-            }
-        
-            .service-box img {
-                width: 100%;
-                max-width: 300px;
-                border-radius: 10px;
-                transition: transform 0.3s ease;
-            }
-        
-            .service-box img:hover {
-                transform: scale(1.05);
-            }
-        </style>
-        <div class="col span_3">
-            <div id="nav_menu-4" class="widget widget_nav_menu">
-                <h4 class="menu-title">Other Services</h4>
-                <div class="menu-other_services-container">
-                    <ul id="menu-other_services" class="menu">
-                        <li id="menu-item-92" class="menu-item"><a href="#">Under-body anti-rust coatings</a></li>
-                        <li id="menu-item-93" class="menu-item"><a href="#">Windshield and all glass polishing</a></li>
-                        <li id="menu-item-94" class="menu-item"><a href="#">Seat covers and Door pad leather upholstery</a></li>
-                        <li id="menu-item-95" class="menu-item"><a href="#">Steering, Gear knob and Gear bellow covers</a></li>
-                        <li id="menu-item-96" class="menu-item"><a href="#">7D mats with custom stitching</a></li>
-                        <li id="menu-item-97" class="menu-item"><a href="#">Headlight and taillight restorations</a></li>
-                        <li id="menu-item-98" class="menu-item"><a href="#">Body Washing and Vacuuming</a></li>
-                        <li id="menu-item-99" class="menu-item"><a href="#">Headliners replacement</a></li>
-                    </ul>
+
+
+        <section class="section-detailing">
+            <div class="container-fluid">
+                <div class="section-container">
+                    <div class="detailing-header" data-aose="zoom-in">
+                        <h1>
+                            <i>"Detailing is not a skill,<br>It's an Attitude!"</i>
+                        </h1>
+                    </div>
+                    <div class="row detailing-row">
+                        <div class="col-md-6 detailing-img">
+                            <img data-aose="fade-right" src="detailing-1.webp" loading="lazy">
+                        </div>
+                        <div class=" col-md-6 detailing-para" data-aose="zoom-in">
+                            <p>Welcome to The DreamWheels: One-Stop Solution to All Your Car Care Problems. “Perfection
+                                is in the Detail”,<br> this is what we believe in. We are called “The King of the
+                                Detailing World” by the Automotive Detailing Industry.<br>
+                                Our skilled and trained personnel have turned ordinary looking cars into
+                                Fabulous-looking Ones. With all hands-on decks,
+                                we strive to impress. Our hard work and long hours have turned many tough-stained
+                                Cars into mesmerizing beauties.
+                                We pat our backs for having the Perfect Eye for Car Detailing. We imbibe a wide
+                                range of car care products, like the Clarity Coat ,
+                                 Ceramic Coating , Paint Protection Film and so on, that can be customized as per
+                                your vehicle's requirements.<br><br>
+                            </p>
+                            <p class="more-btn">
+                                <a class="btn" href="#">Know More </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-<style>
-    /* General styling */
-.widget_nav_menu {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading Style */
-.menu-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    text-transform: uppercase;
-}
-
-/* Menu Styling */
-.menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-item {
-    margin-bottom: 15px;
-}
-
-.menu-item a {
-    text-decoration: none;
-    font-family: 'Arial', sans-serif;
-    font-size: 1rem;
-    color: #444;
-    padding: 10px;
-    display: block;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effects */
-.menu-item a:hover {
-    background-color: #0a0a0a;
-    color: #fff;
-    transform: translateX(5px); /* Adds a slight movement on hover */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Optional: Add icons */
-.menu-item a::before {
-    content: "\2022"; /* Adds bullet points */
-    margin-right: 10px;
-    color: #ca1414;
-}
-
-/* Media Query for responsiveness */
-@media (max-width: 768px) {
-    .widget_nav_menu {
-        padding: 15px;
-    }
-    .menu-title {
-        font-size: 1.2rem;
-    }
-    .menu-item a {
-        font-size: 0.9rem;
-    }
-}
-
-</style>        
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- Visit The Store Section -->
-            <div class="col-lg-3 col-md-6">
-                <div class="footer-contact">
-                    <h2>Visit The Store</h2>
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.370998581287!2d73.90897517460678!3d18.55730548254332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3a880499bf1%3A0x5ed0d73bcddcbb33!2sBrotomotiv-%20Car%20Detailing%20%26%20Paint%20Shop!5e0!3m2!1sen!2sin!4v1708767232064!5m2!1sen!2sin" 
-                        width="300" 
-                        height="150" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <p><strong>Address:</strong> Delta Complex block d Delta 1 G.Noida(up)-201310</p>
-                </div>
-            </div>
-
-            <!-- Contact Us Section -->
-            <div class="col-lg-3 col-md-6">
-                <div class="footer-contact">
-                    <h2>Contact Us</h2>
-                    <p><strong>Email:</strong> contact@DreamWheels.in</p>
-                    <p>
-                        (<em>Please do not send service/work enquiry on this mail. Click service enquiry on top of the page for enquiries.</em>)
-                    </p>
-                    <p><strong>Phone:</strong> +916205067059</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Copyright Row -->
-    <div class="row" id="copyright" data-layout="default">
-        <div class="container">
-            <div class="col-lg-6">
-                <p>&copy; 2024 DreamWheels.</p>
-            </div>
-            <div class="col-lg-6 text-right">
-                <ul class="social">
-                    <!-- Add social media links if needed -->
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-/* General Footer Styling */
-.footer {
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 40px 0;
-}
-
-.footer h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #f4f4f9;
-}
-
-.footer p {
-    color: #f4f4f9;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.footer iframe {
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.footer a {
-    color: #27ae60;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-#copyright {
-    background-color: #1a242f;
-    color: #f4f4f9;
-    padding: 10px 0;
-    text-align: center;
-}
-
-#copyright ul.social {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#copyright ul.social li {
-    display: inline-block;
-    margin-right: 10px;
-}
-</style>
-            
 </body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    p {
+        color: white;
+    }
+
+    .container-fluid {
+        position: relative;
+    }
+
+    .section-detailing {
+        margin: 0px;
+    }
+
+    .detailing-para .more-btn a {
+        background: red;
+        color: white;
+    }
+
+    .section-container {
+        padding: 0px 40px;
+    }
+
+    .section-container:after {
+        content: '';
+        background: white;
+        width: 48%;
+        left: -150px;
+        top: 0;
+        z-index: -1;
+        transform: skew(27deg, 0deg);
+        position: absolute;
+        height: 80%;
+    }
+
+    .detailing-header h1,
+    .detailing-header h2 {
+        font-size: 40px;
+        padding: 20px 0px;
+        width: 100%;
+        color: white;
+        font-weight: 900;
+        text-align: center;
+        font-family: Montserrat, Sans-serif;
+    }
+
+    .detailing-row {
+        margin-top: 3rem;
+    }
+
+
+    .detailing-row {
+        display: flex;
+        align-items: flex-start;
+        
+    }
+
+    .detailing-img {
+        width: 50%;
+        padding-right: 20px;
+
+    }
+    .detailing-img img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        
+    }
+
+    .detailing-para {
+        width: 66%;
+        padding-left: 20px;
+        margin-top: -20px;
+    }
+
+    .detailing-para p {
+        color: white;
+        text-align: left;
+    }
+</style>
+
 </html>

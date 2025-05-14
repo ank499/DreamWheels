@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWheels Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: #76716e;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .service-card {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .service-card h2 {
+            color: #8c1010e2;
+        }
+        .service-card p {
+            font-size: 14px;
+        }
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 15px rgba(118, 2, 2, 0.633);
+        }
+        a {
+            text-decoration: none; 
+            color: inherit; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+    
+    <section class="services">
+        <a href="next.html" class="service-card">
+            <h2>Car Customization</h2>
+            <img src="download (3).jpeg" alt="Custom Car Modification">
+            <p>Upgrade your ride with custom paint, body kits, and alloy wheels.</p>
+        </a>
+
+        <a href="tuning.html" class="service-card">
+            <h2>Performance Tuning</h2>
+            <img src="man.jpeg" alt="Performance Tuning">
+            <p>Enhance engine power with ECU remapping, turbo upgrades, and NOS setup.</p>
+        </a>
+
+        <a href="interiorhtml.html" class="service-card">
+            <h2>Interior Modifications</h2>
+            <img src="interior.jpeg" alt="Interior Mods">
+            <p>Luxury interiors, ambient lighting, and premium sound systems.</p>
+        </a>
+
+        <a href="alloy.html" class="service-card">
+            <h2>Alloy Wheels Customization</h2>
+            <img src="download (2).jpeg" alt="Alloy Wheels">
+            <p>Premium alloy wheels for better performance and stylish looks.</p>
+        </a>
+
+        <a href="protection.html" class="service-card">
+            <h2>Protection & Maintenance</h2>
+            <img src="three.jpeg" alt="Protection & Maintenance">
+            <p>Ceramic coating, paint protection film, and security systems.</p>
+        </a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 DreamWheels | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

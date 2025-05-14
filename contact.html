@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+  background: linear-gradient(to bottom right, rgba(0,0,0, 0.9), rgba(36,11,54, 0.8), rgba(195,20,50,0.9)), url("https://i.imgur.com/3vacZxN.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.contact-header {
+  font-family: "Montserrat", sans-serif;
+  margin: 10rem 10rem 3rem 10rem;
+  text-align: center;
+}
+
+#co-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c31432;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#co-text {
+  font-size: 3rem;
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  line-height: 2;
+  height: auto;
+  width: 70%;
+  background-color: rgba(0,0,0,0.6);
+  margin-bottom: 10rem;
+}
+
+.contact-form {
+  font-family: "Montserrat", sans-serif;
+  padding: 5rem;
+}
+
+#form-title {
+  color: #fff;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 1px;
+  margin-left: 4rem;
+  margin-bottom: 3rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.form-field {
+  outline: none;
+  width: 200%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    margin-bottom: .9rem;
+}
+
+#name, #email, #subject, #message {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  outline: none;
+  background: transparent;
+  border: none;
+  letter-spacing: 2px;
+  font-size: .6rem;
+  line-height: 2rem;
+  padding-bottom: 0.7rem;
+}
+
+textarea, #message {
+  width: 100%;
+  color: #fff;
+  overflow: visible;
+}
+
+#form-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  border: none;
+  color: white;
+  font-size: 0.6rem;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 200%;
+  height: 60px;
+  background-color: #c31432;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+#form-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2.5%);
+  box-shadow: 0 0 15px 0 #000;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 5rem;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.contact-info h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #c31432;
+}
+
+.contact-info a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  line-height: 3rem;
+  margin-bottom: 5rem;
+  transition: all .3s ease;
+}
+
+.contact-info a:hover {
+  transform: translateY(-2.5%);
+  color: #999;
+}
+
+.contact-info .fab {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  padding-left: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.fab:hover{
+  transform: scale(1.2);
+  color: #99999900;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+  
+  #form-btn {
+    width: 100%;
+  }
+  
+  #form-title {
+    margin: 3rem auto;
+  }
+  
+  .contact-header{
+    margin: 5rem 5rem 3rem 5rem;
+  }
+  
+  #co-title {
+    font-size: 1rem;
+  }
+  
+  #co-text {
+    font-size: 2.5rem;
+  }
+  
+  .contact-form {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .form-field {
+    width: 125%;
+  }
+  
+  #form-title {
+    margin: 3rem auto;
+  }
+  
+  #form-btn {
+    width: 125%;
+  }
+  
+  .contact-header{
+    margin: 7rem 7rem 3rem 7rem;
+  }
+  
+  .contact-info {
+    padding: 5rem;
+   
+  }
+  
+  #co-title {
+    font-size: 1rem;
+  }
+  
+  #co-text {
+    font-size: 2.5rem;
+  }
+  
+  .contact-form {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1460px) {
+  .form-field {
+    width: 200%;
+  }
+  
+  #form-btn {
+    width: 200%;
+  }
+}  
+.screenshot-wrapper {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.screenshot-img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  touch-action: manipulation;
+  transform: scale(1);
+}
+
+/* Touch or Hover Effect */
+.screenshot-img:hover,
+.screenshot-img:active {
+  transform: scale(1.05) rotateZ(0.5deg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  opacity: 0.97;
+}
+
+</style>
+<body>
+  <section class="contact">
+    <div class="contact-header">
+      <h3 id="co-title">Contact Me</h3>
+      <h1 id="co-text">DreamWheels!</h1>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-form">
+        <h3 id="form-title">Send me a message</h3>
+      <form action="mailto:npeel3497@gmail.com" method="post" enctype="text/plain">
+        <fieldset>
+          <div class="form-field">
+            <input name="name" type="text" id="name" placeholder="Your Name"></input>
+          </div>
+        <div class="form-field">
+            <input name="email" type="email" id="email" placeholder="Your Email"></input>
+          </div>
+        <div class="form-field">
+            <input name="Subject" type="text" id="subject" placeholder="Subject"></input>
+          </div>
+      <div class="form-field">
+            <textarea name="message" type="text" id="message" placeholder="Your Message"></textarea>
+          </div>
+        </fieldset>
+    <input id="form-btn" type="submit" value="send">
+      </form>
+  </div>
+    
+      <div class="contact-info">
+        <h3>Email Me At </h3>
+        <a href="mailto:kumarpraveen49820@gmail.com"><p>contactDreamWheels@gmail.com</p></a>
+        <h3>Find Me On </h3>
+        <div class="contact-links">
+          <a><i class="fab fa-linkedin"></i></a>
+          <a><i class="fab fa-github"></i></a>
+          <a><i class="fab fa-codepen"></i></a>
+        </div>
+      </div>
+      </div>
+  </section>
+  <div class="screenshot-wrapper">
+    <img src="yuvv.png" alt="Map Screenshot" class="screenshot-img" />
+  </div>
+  
+</body>
+</html>

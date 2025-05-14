@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Modifications | DreamWheels</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: #76716e;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            text-align: left;
+        }
+        h2 {
+            color: #ffcc00;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ffcc00;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #8c1010e2;
+            color: white;
+        }
+        iframe {
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .calculator {
+            margin-top: 20px;
+            padding: 15px;
+            background: #292929;
+            border-radius: 10px;
+        }
+        input, select, button {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background: #8c1010e2;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ffcc00;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interior Modifications</h1>
+    </header>
+
+    <section class="container">
+        <h2>Transform Your Car's Interior</h2>
+        <p>Give your car a luxurious, stylish, and high-tech feel with our premium interior modifications.</p>
+
+        <h2>Popular Interior Upgrades</h2>
+        <ul>
+            <li><strong>Luxury Leather Seats</strong> – Upgrade to premium leather or Alcantara for comfort.</li>
+            <li><strong>Ambient LED Lighting</strong> – Customizable RGB lighting for a modern look.</li>
+            <li><strong>Premium Sound Systems</strong> – High-fidelity speakers, amplifiers, and subwoofers.</li>
+            <li><strong>Carbon Fiber or Wood Trims</strong> – Enhance your dashboard and doors with premium materials.</li>
+            <li><strong>Custom Steering Wheels</strong> – Sporty, heated, or carbon-fiber steering wheels.</li>
+            <li><strong>Smart Displays & Infotainment</strong> – Touchscreen displays, Apple CarPlay, and Android Auto.</li>
+        </ul>
+
+        <h2>Benefits of Interior Modifications</h2>
+        <ul>
+            <li>🚗 **Enhanced Comfort** – Premium seats and ergonomic design for a better ride.</li>
+            <li>🔊 **Superior Sound Quality** – High-end speakers and subwoofers for immersive audio.</li>
+            <li>🌈 **Personalized Ambiance** – Custom LED lighting to match your mood.</li>
+            <li>🎛 **Modern Technology** – Smart displays, touchscreen controls, and connectivity.</li>
+            <li>💎 **Luxury & Aesthetic Appeal** – Make your car interior look and feel premium.</li>
+        </ul>
+
+        <h2>Interior Upgrade Cost Estimator</h2>
+        <div class="calculator">
+            <label for="base-cost">Enter Your Budget ($): </label>
+            <input type="number" id="base-cost" placeholder="e.g. 1000">
+
+            <label for="upgrade">Select Upgrade Type:</label>
+            <select id="upgrade">
+                <option value="500">Luxury Leather Seats (+$500)</option>
+                <option value="300">Ambient LED Lighting (+$300)</option>
+                <option value="700">Premium Sound System (+$700)</option>
+            </select>
+
+            <button onclick="calculateUpgrade()">Estimate Total Cost</button>
+            <p id="result"></p>
+        </div>
+
+        <h2>Interior Modification Packages</h2>
+        <table>
+            <tr>
+                <th>Upgrade</th>
+                <th>Features</th>
+                <th>Estimated Cost</th>
+            </tr>
+            <tr>
+                <td>Luxury Leather Seats</td>
+                <td>Premium leather, heated & ventilated options</td>
+                <td>20000 - $2,000</td>
+            </tr>
+            <tr>
+                <td>Ambient LED Lighting</td>
+                <td>Custom RGB, voice-activated control</td>
+                <td>$300 - $800</td>
+            </tr>
+            <tr>
+                <td>Premium Sound System</td>
+                <td>High-fidelity speakers, amplifiers, subwoofers</td>
+                <td>$700 - $2,500</td>
+            </tr>
+        </table>
+
+        <h2>See Interior Upgrades in Action</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+        frameborder="0" allowfullscreen></iframe>
+
+        <h2>Why Choose DreamWheels?</h2>
+        <ul>
+            <li>✅ High-Quality Materials & Craftsmanship</li>
+            <li>✅ Custom Interior Designs to Match Your Style</li>
+            <li>✅ Professional Installation with Attention to Detail</li>
+            <li>✅ 100% Satisfaction Guarantee</li>
+        </ul>
+
+        <h2>Book a Consultation Today!</h2>
+        <p>Upgrade your interior and drive in luxury! 🚗✨</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 DreamWheels | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function calculateUpgrade() {
+            let baseCost = document.getElementById("base-cost").value;
+            let upgrade = document.getElementById("upgrade").value;
+            
+            if (baseCost) {
+                let totalCost = parseInt(baseCost) + parseInt(upgrade);
+                document.getElementById("result").innerHTML = 
+                    `Estimated Total Cost: <strong>$${totalCost}</strong>`;
+            } else {
+                document.getElementById("result").innerHTML = "Please enter your budget.";
+            }
+        }
+    </script>
+</body>
+</html>

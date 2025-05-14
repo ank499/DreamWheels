@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us| DreamWheels</title>
+</head>
+<style>
+  .partner-grid {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .partner-grid .text-center {
+    text-align: center;
+  }
+  
+  .partner-grid h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .partner-grid h2 span {
+    color: #007bff; /* Or your brand color */
+  }
+  
+  .partner-grid p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .slider-brands {
+    overflow: hidden; /* Hide overflowing slides */
+    position: relative; /* For positioning navigation buttons */
+  }
+  
+  .swiper-wrapper {
+    display: flex; /* Arrange slides horizontally */
+    transition: transform 0.5s ease; /* Smooth sliding */
+  }
+  
+  .swiper-slide {
+    width: auto; /* Or a fixed width if you prefer */
+    margin-right: 20px; /* Spacing between slides */
+    flex-shrink: 0; /* Prevent slides from shrinking */
+  }
+  
+  .p-logo {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  .p-logo figure {
+    margin: 0;
+    display: inline-block;
+    max-width: 150px; /* Adjust max logo width */
+    height: auto;
+  }
+  
+  .p-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Optional: Navigation button styles */
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure buttons are above the slider */
+    color: #007bff; /* Or your brand color */
+    /* Add more styling as needed (background, border, etc.) */
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+  
+  .swiper-button-prev {
+    left: 10px;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .partner-grid h2 {
+      font-size: 1.75rem;
+    }
+  
+    .partner-grid p {
+      font-size: 1rem;
+    }
+  
+      .p-logo figure {
+        max-width: 120px;
+      }
+  }
+  
+  @media (max-width: 576px) {
+    .p-logo figure {
+      max-width: 100px;
+    }
+  }
+</style>
+<body>
+    <section id="about-us" class="about-us">
+        <div class="container">
+          <h2><b>ABOUT <span>US</span></b></h2>
+          <p>Welcome to DreamWheels, where we turn your dream ride into reality. Our team is dedicated to providing you with the best automotive solutions, from high-end vehicles to custom modifications. Whether you're looking for the perfect car or need assistance with car customization, DreamWheels is your trusted partner.</p>
+          <div class="team">
+            <div class="team-member" id="member1">
+              <img src="ankit.jpg"  class="team-img">
+              <h3>Ankit Goswami</h3>
+              <p>Founder & CEO</p>
+            </div>
+            <div class="team-member" id="member2">
+              <img src="praven.jpg"  class="team-img">
+              <h3>Hrishabh Baisoya</h3>
+              <p>Lead Engineer</p>
+            </div>
+            <div class="team-member" id="member3">
+              <img src="rishab.jpg"  class="team-img">
+              <h3>Praveen kumar</h3>
+              <p>Creative Director</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Modal for team member details -->
+      <div id="team-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h3 id="modal-name"></h3>
+          <p id="modal-role"></p>
+          <p id="modal-description"></p>
+        </div>
+      </div>
+      <section class="section Obsessed">
+        <div class="container">
+           <div class="section-containerr" >
+              <div class="obsessed-heading" data-aos="zoom-in">
+                 <h2><span>Obsessed With Quality</span></h2>
+                 <p>MANMACHINE CAR CARE The Paragon of Detailing industry brings you a wide range of car care
+                    products from the best companies across the Globe. We closely work with the High-end
+                    companies that focus on manufacturing the products, without compromising the quality.
+                    Blending the experience with innovation and technology, our products go beyond just the
+                    ultimate presentation and superior protection. It's a competitive world out there and
+                    creating a never lasting impression is vital for building long term business relationships,
+                    so, our main focus revolves around bringing best car care methods in the Indian Market.
+                 </p>
+                 <!-- <a href="https://www.thedetailingmafia.com/assets/images/pages/about/MMCC-Brochure.pdf" target="_blank">
+                    <img src="https://www.thedetailingmafia.com/assets/images/about/Brochure_MMC_clickable.webp" alt="Brochure_MMCC"
+                         loading="lazy">
+                    </a> -->
+              </div>
+           </div>
+        </div>
+     </section>
+
+     <section class="pt-2 pb-3 pb-md-4 partner-grid">
+      <div class="container">
+      <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+      <h2 class="mb-3 aos fadeInUp" data-aos-delay=".1s">Brands We have  <span>Worked on</span></h2>
+      <p class="mb-4" data-aos-delay=".2s">We’ve worked on almost every automobile brand. All of them have undergone our signature detailing services and we’ve received ample of good reviews from their proud owners.<br>
+      We look forward to covering all big and small automobile brands under our umbrella and serve as many customers as possible.</p>
+      </div>
+      </div>
+      
+      <div class="slider-brands swiper mt-4" id="swiper-brands" data-aos="fade-up">
+      <div class="swiper-wrapper">
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".2s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/1.png" />		
+      </figure>
+      </div>	
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".3s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/2.png" />		
+      </figure>
+      </div>
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".4s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/3.png" />		
+      </figure>
+      </div>
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".5s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/4.png" />	
+      </figure>
+      </div>
+      
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".2s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/5.png" />		
+      </figure>
+      </div>	
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".3s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/6.png" />		
+      </figure>
+      </div>
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".4s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/7.png" />	
+      </figure>
+      </div>
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".5s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/8.png" />	
+      </figure>
+      </div>
+      
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".2s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/9.png" />		
+      </figure>
+      </div>	
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".3s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/10.png" />		
+      </figure>
+      </div>
+      <div class="p-logo swiper-slide">
+      <figure class=" aos fadeInUp" data-aos-delay=".4s">
+      <img class="lazygallery" src="https://www.detailingdevils.com/uploads/images/brands/new-brand/11.png" />		
+      </figure>
+      </div>
+      
+      
+
+
+    
+</body>
+  
+<style>
+    #about-us {
+  
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  animation: fadeIn 1.5s ease-in-out;
+  font-weight: 900;
+}
+span{
+  color: red;
+}
+#about-us .container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#about-us p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 200px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #777777ca;
+}
+.Obsessed {
+  
+  background: #000000c2;
+  position: relative;
+  background-image: url(11.png);
+  z-index: 0;
+  background-position: bottom;
+  padding: 70px 0px;
+}
+
+.Obsessed:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(174deg, black, #ff0000b0);
+}
+
+.obsessed-heading {
+  text-align: center;
+}
+
+.obsessed-heading h2 {
+  font-size: 45px;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #fff;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 700;
+}
+
+.obsessed-heading h2 span {
+  border-top: 9px solid #f00;
+  padding-top: 6px;
+  display: inline-block;
+}
+
+.obsessed-heading p {
+  color: white !important;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 2rem;
+}
+
+
+</style>
+</html>
+<script>
+    // Modal logic
+const teamMembers = document.querySelectorAll('.team-member');
+const modal = document.getElementById('team-modal');
+const closeBtn = document.querySelector('.close-btn');
+const modalName = document.getElementById('modal-name');
+const modalRole = document.getElementById('modal-role');
+const modalDescription = document.getElementById('modal-description');
+
+// Data for team members (you can customize this)
+const teamData = {
+  member1: {
+    name: 'Ankit Goswami',
+    role: 'Founder & CEO',
+    description: 'John is the visionary behind DreamWheels, with over 15 years of experience in the automotive industry.'
+  },
+  member2: {
+    name: 'Hrishabh Baisoya',
+    role: 'Lead Engineer',
+    description: 'Jane oversees all engineering projects at DreamWheels, ensuring that every vehicle is built to perfection.'
+  },
+  member3: {
+    name: 'Praveen Kumar',
+    role: 'Creative Director',
+    description: 'Michael brings innovative ideas to life, working on vehicle aesthetics and custom designs for our clients.'
+  }
+};
+
+// Show modal when a team member is clicked
+teamMembers.forEach((member) => {
+  member.addEventListener('click', (e) => {
+    const memberId = e.target.closest('.team-member').id;
+    modal.style.display = 'block';
+    modalName.textContent = teamData[memberId].name;
+    modalRole.textContent = teamData[memberId].role;
+    modalDescription.textContent = teamData[memberId].description;
+  });
+});
+
+// Close modal when the close button is clicked
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close modal if clicked outside the modal content
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+const swiper = new Swiper('.slider-brands', {
+  // ... other options
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+</script>
